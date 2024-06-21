@@ -6,11 +6,11 @@ import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js'
 export default [
   {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-    extends: [
-      'plugin:react/recommended',
-      'standard-with-typescript',
-      'prettier', // Ditambahkan
-    ],
+    // extends: [
+    //   'plugin:react/recommended',
+    //   'standard-with-typescript',
+    //   'prettier', // Ditambahkan
+    // ],
   },
   {
     languageOptions: {
