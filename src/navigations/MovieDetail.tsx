@@ -1,13 +1,17 @@
+import { API_URL, TOKEN } from '@env'
 import React from 'react'
 import { Button, Text, View } from 'react-native'
 
 function MovieDetail(): JSX.Element {
   const fetchData = async (): Promise<void> => {
-    const ACCESS_TOKEN =
-      'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMTZhZjQ0M2Y2MDIxN2Y3YTBjNTFhODRlZmIwODJjNiIsIm5iZiI6MTcxOTAyNzI5My45ODIwNzIsInN1YiI6IjY2NzY0NTI1MWI3YTgyMmY4NzlmZTFjNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.30AQB6I-Q3XQPvCcsbA-PB64m-o5yblaqrqryYbdm5w'
+    const ACCESS_TOKEN = TOKEN
+    const url = API_URL
 
-    const url =
-      'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1'
+    console.log(url)
+
+    if (ACCESS_TOKEN === null || url === null) {
+      throw new Error('Env variables not set')
+    }
 
     const options = {
       method: 'GET',
