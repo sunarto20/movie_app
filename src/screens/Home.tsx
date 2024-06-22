@@ -6,12 +6,12 @@ import MovieDetail from '../navigations/MovieDetail'
 const Tab = createNativeStackNavigator()
 
 function Home(): JSX.Element {
-    return (
-        <Tab.Navigator>
-            <Tab.Screen name='HomeStack' component={HomeStackNavigation} />
-            <Tab.Screen name='MovieDetail' component={MovieDetail} />
-        </Tab.Navigator>
-    )
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="HomeStack" component={HomeStackNavigation} />
+      <Tab.Screen name="MovieDetail" component={MovieDetail} />
+    </Tab.Navigator>
+  )
 }
 
 export default Home
